@@ -1,0 +1,70 @@
+@import "../vars"
+@import "../mixins"
+
+.hero
+    background-color: $colorBeige
+
+    &__container
+        position: relative
+        display: flex
+        justify-content: flex-end
+        background-image: url("../img/hero.png")
+        background-size: auto
+        background-repeat: no-repeat
+        background-position: -53%
+        @include tablet
+            background-size: contain
+            background-position: 0
+        @include mobile
+            justify-content: center
+            background-image: none
+
+    &__title
+        position: relative
+        padding-top: 292px
+        padding-bottom: 375px
+        margin-right: 102px
+        width: 377px
+        font-weight: $fontWeightBold
+        font-size: 32px
+        line-height: 38px
+        color: $colorBlackLight
+        &::before
+            content: ""
+            position: absolute
+            left: -27px
+            height: 90px
+            border-left: 12px solid $colorPink
+            @include tablet
+                left: -28px
+                top: 139px
+                height: 91px
+            @include mobile
+                height: 61px
+                top: 150px
+        &-span
+            font-weight: $fontWeightBlack
+            font-size: 48px
+            line-height: 58px
+            &-pink
+                color: $colorPink
+            @include tablet
+                font-size: 44px
+                line-height: 53px
+            @include mobile
+                font-size: 38px
+                line-height: 45px
+        @include tablet
+            padding-top: 144px
+            padding-bottom: 155px
+            margin-right: 16px
+            width: 284px
+            font-size: 24px
+            line-height: 16px
+        @include mobile
+            padding-top: 152px
+            padding-bottom: 150px
+            margin-right: -27px
+            width: 236px
+            font-size: 20px
+            line-height: 16px

@@ -1,0 +1,63 @@
+@import "../vars"
+@import "../mixins"
+
+.advantages
+    padding-top: 103px
+    padding-bottom: 105px
+    background-color: $colorBlackLight
+    @include tablet
+        padding-top: 48px
+        padding-bottom: 62px
+    @include mobile
+        padding-bottom: 80px
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: 134px
+        gap: 30px
+        @include tablet
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(3, 134px)
+            gap: 49px
+        @include mobile
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(3, 128px)
+            justify-content: center
+
+    &__item
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        background-position: top
+        background-repeat: no-repeat
+        background-size: auto
+        &--icon1
+            background-image: url("../img/advantages_icon1.svg")
+        &--icon2
+            background-image: url("../img/advantages_icon2.svg")
+        &--icon3
+            background-image: url("../img/advantages_icon3.svg")
+        @include tablet
+            align-items: center
+
+    &__subtitle
+        margin-bottom: 15px
+        font-weight: $fontWeightRegular
+        font-size: 20px
+        line-height: 24px
+        color: $colorGrey
+        text-align: center
+        @include tablet
+            margin-bottom: 16px
+        @include mobile
+            margin-bottom: 13px
+
+    &__paragraph
+        font-weight: $fontWeightLight
+        font-size: 13px
+        line-height: 16px
+        text-align: center
+        color: $colorGrey
+        @include tablet
+            width: 360px

@@ -1,0 +1,131 @@
+@import "../vars"
+@import "../mixins"
+
+.product
+    padding-top: 100px
+    padding-bottom: 94px
+    @include tablet
+        padding-top: 113px
+        padding-bottom: 64px
+    @include mobile
+        padding-top: 66px
+        padding-bottom: 95px
+
+    &__title
+        text-align: center
+        font-weight: $fontWeightRegular
+
+    &__paragraph
+        margin-top: 4px
+        margin-bottom: 47px
+        text-align: center
+        color: $colorGray
+        @include tablet
+            margin-bottom: 70px
+        @include mobile
+            margin-top: 2px
+            margin-bottom: 63px
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(auto-fit, 360px)
+        justify-content: center
+        gap: 30px
+        @include tablet
+            gap: 16px
+            grid-template-columns: repeat(2, 1fr)
+        @include mobile
+            grid-template-columns: 360px
+            gap: 14px
+
+    &__item
+        position: relative
+        display: flex
+        flex-direction: column
+        background-color: $colorGrey
+        &:hover .product__img
+            filter: brightness(0.5)
+        &:hover .product__add
+            display: flex
+
+    &__img
+        position: relative
+        min-height: 0
+        transition: filter 0.5s ease
+        @include mobile
+            width: 100%
+
+    &__add
+        position: absolute
+        top: 188px
+        left: 111px
+        border: 1px solid $colorWhite
+        width: 139px
+        height: 44px
+        font-weight: $fontWeightRegular
+        font-size: 14px
+        line-height: 17px
+        display: none
+        align-items: center
+        justify-content: center
+        gap: 11px
+        color: $colorWhite
+        transition: box-shadow 0.5s ease
+        &:hover
+            box-shadow: 0 0 5px $colorWhite
+        &:hover svg path
+            fill: #f16d7f
+        @include mobile
+            top: 40%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+    &__text
+        padding: 26px 16px 19px 19px
+
+    &__subtitle
+        margin-bottom: 15px
+        font-weight: $fontWeightRegular
+        font-size: 13px
+        line-height: 16px
+        color: $colorBlack
+        text-align: start
+        @include tablet
+            margin-bottom: 12px
+
+    &__subparagraph
+        margin-bottom: 16px
+        font-weight: $fontWeightLight
+        font-size: 14px
+        line-height: 17px
+        color: $colorGrayDark
+        @include tablet
+            margin-bottom: 18px
+
+    &__price
+        margin-top: auto
+        font-weight: $fontWeightRegular
+        font-size: 16px
+        line-height: 19px
+        color: $colorPink
+
+    &__btn
+        display: block
+        margin: 0 auto
+        margin-top: 46px
+        padding: 14px 38px
+        border: 1px solid $colorPinkLight
+        font-weight: $fontWeightRegular
+        font-size: 16px
+        line-height: 19px
+        color: $colorPinkDark
+        transition-property: color, background-color
+        transition-duration: 0.4s
+        transition-timing-function: ease-in-out
+        &:hover
+            color: $colorWhite
+            background-color: $colorPinkDark
+        @include tablet
+            margin-top: 30px
+        @include mobile
+            margin-top: 41px

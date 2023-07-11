@@ -1,0 +1,141 @@
+@import "../vars"
+@import "../mixins"
+
+.header
+  background-color: $colorBlackLight
+  padding: 17px 0
+  @include tablet
+    padding-bottom: 15px
+
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  &__logo
+    display: inline-block
+    margin-right: 36px
+
+  @include tablet
+    &__left
+      margin-left: 15px
+      @include mobile
+        margin-left: 0
+
+  &__right
+    display: flex
+    gap: 34px
+    margin-right: 10px
+    margin-top: 5px
+    @include tablet
+      margin-right: 27px
+      margin-top: 8px
+      gap: 40px
+    @include mobile
+      margin-top: -2px
+      margin-right: 0
+
+  &__btn-burger
+    position: relative
+    display: inline-block
+    margin-top: 5px
+    @include tablet
+      margin-right: -14px
+    @include mobile
+      margin-right: 0
+
+  &__btn-input
+    position: absolute
+    visibility: hidden
+    left: -9999999px
+    &:checked ~ .header__btn-burger-menu
+      right: 0
+
+  &__btn-personal-area
+    margin-left: -8px
+    margin-right: 6px
+    @include mobile
+      display: none
+
+  @include mobile
+    &__btn-cart
+      display: none
+
+  &__btn-burger-menu
+    position: absolute
+    z-index: 10
+    top: 77px
+    right: -200%
+    width: 232px
+    padding: 39px 25px 39px 31px
+    background-color: $colorWhite
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
+    transition: right 0.5s ease-out
+    &-close
+      position: absolute
+      top: 15px
+      right: 16px
+    &-close:hover .header__btn-burger-menu-close-svg path
+      fill: $colorPink
+    @include mobile
+      width: 100%
+
+  &__btn-burger-menu-title
+    margin-bottom: 24px
+    font-weight: $fontWeightBold
+    font-size: 14px
+    line-height: 17px
+    color: $colorBlack
+
+  &__btn-burger-menu-item-subtitle
+    margin-bottom: 12px
+    font-weight: $fontWeightRegular
+    font-size: 14px
+    line-height: 17px
+    color: $colorPink
+
+  &__btn-burger-menu-list
+    display: flex
+    flex-direction: column
+    gap: 21px
+
+  &__btn-burger-menu-sublist
+    display: flex
+    flex-direction: column
+    gap: 11px
+
+  &__btn-burger-menu-subitem
+    display: flex
+    flex-direction: column
+    gap: 11px
+    padding-left: 25px
+
+  &__btn-burger-menu-link
+    display: block
+    width: 100%
+    font-weight: $fontWeightRegular
+    font-size: 14px
+    line-height: 17px
+    color: $colorGrayOther
+    transition: color 0.5s ease
+    &:hover
+      color: $colorPink
+
+  &__btn-cart
+    position: relative
+
+  &__btn-cart--add::before
+    position: absolute
+    top: -7px
+    right: -9px
+    content: "5"
+    padding: 2.5px 5px
+    border-radius: 100%
+    color: $colorWhite
+    background-color: $colorPink
+
+  &__btn-search:hover &__btn-search-svg-path,
+  &__btn-burger:hover &__btn-burger-svg-path,
+  &__btn-personal-area:hover &__btn-personal-area-svg-path,
+  &__btn-cart:hover &__btn-cart-svg-path
+    fill: $colorPink

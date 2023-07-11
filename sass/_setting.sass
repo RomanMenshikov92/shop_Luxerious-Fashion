@@ -1,0 +1,107 @@
+@import "vars"
+@import "mixins"
+@import "fonts"
+
+/*global*/
+*,
+*:before,
+*:after
+  box-sizing: inherit
+  /* outline: 1px solid red; */
+
+*:focus
+  outline: none
+
+html
+  box-sizing: border-box
+  scroll-behavior: smooth
+
+body
+  position: relative
+  margin: 0
+  padding: 0
+  font-family: $fontFamily
+  font-style: $fontNormal
+  font-weight: $fontWeightRegular
+  color: $colorWhiteSmoke
+
+img
+  max-width: 100%
+  min-height: 100%
+  object-fit: cover
+
+svg
+  fill: inherit
+  stroke: inherit
+  transition: fill 0.5s ease
+
+path
+  transition: fill 0.5s ease
+
+summary
+  display: block
+  &::-webkit-details-marker
+    display: none
+
+a
+  outline: none
+  color: inherit
+  text-decoration: none
+
+/*reset*/
+.btn-reset
+  padding: 0
+  border: none
+  outline: none
+  text-align: center
+  color: $colorBlack
+  background-color: transparent
+  cursor: pointer
+
+.list-reset
+  margin: 0
+  padding: 0
+  text-decoration: none
+  list-style: none
+
+.input-reset
+  padding: 0
+  -webkit-appearance: none
+  appearance: none
+  border: none
+  resize: none
+  outline: none
+  border-radius: 0
+  background-color: transparent
+
+.visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+  clip: rect(0 0 0 0)
+  overflow: hidden
+
+/*default*/
+.container
+  max-width: $MaxWidthContainerDesktop
+  padding: 0 $widthContainerPadding
+  margin: 0 auto
+  @include tablet
+    padding: 0 $widthContainerTabletPadding
+
+.title
+  margin: 0
+  padding: 0
+  font-size: 30px
+  line-height: 36px
+  color: $colorBlackLight
+
+.paragraph
+  margin: 0
+  padding: 0
+  font-size: 14px
+  line-height: 17px
+  color: $colorGrayDark

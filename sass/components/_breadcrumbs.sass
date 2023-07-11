@@ -1,0 +1,63 @@
+@import "../vars"
+@import "../mixins"
+
+.breadcrumbs
+    background-color: $colorLightBegie
+
+    &__container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 60px 0
+        padding-bottom: 53px
+        @include tablet
+            padding-top: 58px
+        @include mobile
+            flex-direction: column
+            gap: 26px
+            padding-top: 22px
+            padding-bottom: 44px
+
+    &__title
+        margin-left: 24px
+        font-size: 24px
+        font-weight: $fontWeightRegular
+        color: $colorPink
+        @include tablet
+            margin-left: 16px
+        @include mobile
+            margin-left: 0px
+
+    &__list
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        margin-bottom: 7px
+        margin-right: 25px
+        @include tablet
+            margin-right: 18px
+        @include mobile
+            margin-right: 2px
+            margin-bottom: 0
+
+    &__item:last-child .breadcrumbs__link
+        font-weight: $fontWeightBold
+        color: $colorPink
+
+    &__item:not(:last-child)::after
+        content: '/'
+        padding-left: 3px
+        padding-right: 3px
+        font-weight: $fontWeightLight
+        font-size: 14px
+        line-height: 17px
+        color: $colorBlackLightOther
+
+    &__link
+        font-size: 14px
+        font-weight: $fontWeightLight
+        line-height: normal
+        color: $colorBlackLightOther
+        transition: color 0.5s ease
+        &:hover
+            color: $colorPink

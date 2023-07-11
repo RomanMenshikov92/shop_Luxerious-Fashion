@@ -1,0 +1,207 @@
+@import "../vars"
+@import "../mixins"
+
+.cart
+    padding-bottom: 128px
+
+    &__top
+        background-color: $colorLightBegie
+
+    &__title
+        padding: 60px 0
+        margin-bottom: 96px
+        color: #F16D7F
+        font-size: 24px
+        font-weight: $fontWeightRegular
+        line-height: normal
+
+    &__wrapper
+        display: flex
+        justify-content: space-between
+
+        &-left
+            display: flex
+            flex-direction: column
+            width: 652px
+
+        &-right
+            display: flex
+            flex-direction: column
+            margin-top: 15px
+            width: 360px
+
+    &__products
+        display: flex
+        flex-direction: column
+        gap: 40px
+
+    &__product
+        position: relative
+        display: flex
+        box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13)
+
+        &-btn-close
+            position: absolute
+            top: 28px
+            right: 22px
+            &:hover path
+                fill: $colorPink
+
+        &-img
+            width: 262px
+
+        &-text
+            padding: 22px 31px 62px
+
+        &-title
+            margin-bottom: 42px
+            width: 210px
+            font-size: 24px
+            font-weight: $fontWeightRegular
+            line-height: normal
+            color: $colorBlackLight
+
+        &-wrapper
+            font-size: 22px
+            font-weight: $fontWeightRegular
+            line-height: normal
+            color: $colorBlackLightOtherTwo
+
+        &-price
+            margin-bottom: 6px
+            &-span
+                color: $colorPinkOther
+
+        &-color
+            margin-bottom: 6px
+            &-span
+                color: $colorGrayOther
+
+        &-size
+            margin-bottom: 6px
+            &-span
+                color: $colorGrayOther
+
+        &-quantity-span
+            color: $colorGrayOther
+
+        &-quantity-span
+            margin-left: 24px
+            padding: 16px
+            border: 1px solid $colorLightGrayBorder
+
+        &-color
+            font-size: 22px
+            font-weight: $fontWeightRegular
+            line-height: normal
+            color: $colorBlackLightOtherTwo
+
+    &__nav-btn
+        display: flex
+        justify-content: space-between
+        margin-top: 68px
+
+    &__btn-clear,
+    &__btn-continue
+        display: block
+        padding: 17px 35px
+        border: 1px solid $colorLightGreyBorder
+        color: $colorBlack
+        font-size: 14px
+        font-weight: $fontWeightLight
+        line-height: normal
+        transition-property: color, background-color
+        transition-duration: 0.4s
+        transition-timing-function: ease-in-out
+
+        &:hover
+            color: $colorWhite
+            background-color: $colorPinkDark
+
+    &__form-title
+        color: $colorBlackLight
+        font-size: 16px
+        font-weight: $fontWeightLight
+        line-height: normal
+
+    &__input
+        padding: 13px 16px
+        margin-top: 21px
+        width: 100%
+        border: 1px solid $colorLightGreyBorder
+        font-size: 13px
+        font-weight: $fontWeightLight
+        line-height: normal
+
+        &::placeholder
+            color: #B1B1B1
+
+    &__form-btn
+        padding: 11px 13px
+        margin-top: 23px
+        border: 1px solid $colorLightGreyBorder
+        color: $colorLightGreyBorder
+        font-size: 11px
+        font-weight: $fontWeightLight
+        line-height: normal
+        transition-property: color, background-color
+        transition-duration: 0.4s
+        transition-timing-function: ease-in-out
+
+        &:hover
+            color: $colorWhite
+            background-color: $colorPinkDark
+
+    &__amount
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        margin-top: 55px
+        padding: 43px 33px 42px
+        background-color: $colorLightGrayAmount
+
+        &-total
+            margin-bottom: 12px
+            color: $colorLightGreyBorder
+            font-size: 11px
+            font-weight: $fontWeightRegular
+            line-height: normal
+            &-span
+                padding-left: 23px
+
+        &-grand
+            margin-bottom: 39px
+            margin-right: 4px
+            color: $colorBlackLight
+            font-size: 16px
+            font-weight: $fontWeightLight
+            line-height: normal
+            &-span
+                padding-left: 25px
+                color: $colorPink
+
+        &-btn
+            position: relative
+            padding: 15px 37px
+            margin: 0 9px
+            color: $colorWhite
+            font-size: 16px
+            font-weight: $fontWeightLight
+            line-height: normal
+            background-color: $colorPink
+            transition-property: color, background-color
+            transition-duration: 0.4s
+            transition-timing-function: ease-in-out
+            &::before
+                content: ""
+                position: absolute
+                height: 1px
+                width: 100%
+                top: -20px
+                left: 0
+                border-top: 1px solid $colorLightGrayBorderOther
+
+            &:hover
+                color: $colorPinkDark
+                background-color: $colorWhite

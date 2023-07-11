@@ -1,0 +1,69 @@
+@import "../vars"
+@import "../mixins"
+
+.assortment
+    padding-top: 65px
+    @include mobile
+        padding-top: 64px
+
+    &__list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: 260px 180px
+        grid-gap: 30px
+        @include tablet
+            grid-template-rows: 168px 115px
+            grid-gap: 19px
+        @include mobile
+            grid-template-columns: 1fr
+            grid-template-rows: 247px 249px 249px 111px
+            grid-gap: 32px
+
+    &__item--grid-full
+        grid-column: 1 / -1
+
+    &__link
+        display: block
+        position: relative
+        height: 100%
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            width: 100%
+            height: 100%
+            background-color: $colorMaskOpacity
+        @include tablet
+            overflow: hidden
+        @include mobile
+            overflow: hidden
+
+    @include mobile
+    &__img
+        width: 100%
+
+    &__title
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        display: flex
+        flex-direction: column
+        width: 100%
+        font-weight: $fontWeightBold
+        font-size: 23px
+        line-height: 29px
+        text-align: center
+        color: $colorPink
+        &-span
+            font-weight: $fontWeightRegular
+            font-size: 16px
+            line-height: 19px
+            text-align: center
+            color: #ffffff
+        @include mobile
+            &--fix
+                top: 52%
