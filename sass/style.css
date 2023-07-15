@@ -535,18 +535,8 @@ a {
 /*font-normal*/
 /*color*/
 .cart {
+  padding-top: 95px;
   padding-bottom: 128px;
-}
-.cart__top {
-  background-color: #F8F3F4;
-}
-.cart__title {
-  padding: 60px 0;
-  margin-bottom: 96px;
-  color: #F16D7F;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: normal;
 }
 .cart__wrapper {
   display: flex;
@@ -619,13 +609,13 @@ a {
 .cart__product-size-span {
   color: #6f6e6e;
 }
-.cart__product-quantity-span {
-  color: #6f6e6e;
-}
-.cart__product-quantity-span {
-  margin-left: 24px;
-  padding: 16px;
+.cart__product-quantity-input {
+  margin-left: 31px;
+  padding: 4px;
+  width: 40px;
+  text-align: center;
   border: 1px solid #EAEAEA;
+  color: #6f6e6e;
 }
 .cart__product-color {
   font-size: 22px;
@@ -747,6 +737,164 @@ a {
 .cart__amount-btn:hover {
   color: #f26376;
   background-color: #ffffff;
+}
+
+/*container*/
+/*breakpoint*/
+/*font-weight*/
+/*font-family*/
+/*font-normal*/
+/*color*/
+/* stylelint-disable */ /* stylelint-disable */ /*container*/
+/*breakpoint*/
+/*font-weight*/
+/*font-family*/
+/*font-normal*/
+/*color*/
+.registration {
+  padding-top: 64px;
+  padding-bottom: 98px;
+}
+.registration__container {
+  display: flex;
+  justify-content: space-between;
+}
+.registration__left {
+  width: 359px;
+}
+.registration__right {
+  width: 652px;
+}
+.registration__form {
+  display: flex;
+  flex-direction: column;
+}
+.registration__subtitle {
+  color: #222222;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__input-field {
+  margin-top: 20px;
+  padding: 13px 17px 17px;
+  width: 100%;
+  border: 1px solid #A4A4A4;
+  color: #000000;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: normal;
+  transition-property: background-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+.registration__input-field::-moz-placeholder {
+  color: #B1B1B1;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__input-field::placeholder {
+  color: #B1B1B1;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__input-field:hover {
+  background-color: #e1e1e1;
+}
+.registration__wrapper-input-radio {
+  display: flex;
+  margin-top: 31px;
+  margin-bottom: 33px;
+}
+.registration__label-radio {
+  display: flex;
+  align-items: center;
+  margin-right: 18px;
+  color: #000000;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__input-radio {
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+  color: #000000;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: normal;
+  display: none;
+}
+.registration__input-radio-svg {
+  margin-right: 9px;
+  fill: #ffffff;
+}
+.registration__input-radio:checked + svg {
+  fill: #000000;
+}
+.registration__label-radio:first-child {
+  margin-right: 22px;
+}
+.registration__text {
+  margin-top: 15px;
+  color: #B1B1B1;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__btn {
+  margin-top: 40px;
+  padding: 16px 29px 16px 29px;
+  border: 1px solid transparent;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #f16d7f;
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+.registration__btn:hover {
+  border-color: #f26376;
+  color: #f26376;
+  background-color: #ffffff;
+}
+.registration__btn:hover path {
+  fill: #f26376;
+}
+.registration__btn-svg {
+  margin-left: 18px;
+}
+.registration__title {
+  margin-bottom: 22px;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__description {
+  margin-bottom: 20px;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.registration__item {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: normal;
+}
+.registration__item-svg {
+  margin-right: 15px;
 }
 
 /*container*/

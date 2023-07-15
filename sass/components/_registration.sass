@@ -1,0 +1,138 @@
+@import "../vars"
+@import "../mixins"
+
+.registration
+    padding-top: 64px
+    padding-bottom: 98px
+
+    &__container
+        display: flex
+        justify-content: space-between
+
+    &__left
+        width: 359px
+
+    &__right
+        width: 652px
+
+    &__form
+        display: flex
+        flex-direction: column
+
+    &__subtitle
+        color: $colorBlackLight
+        font-size: 16px
+        font-weight: $fontWeightLight
+        line-height: normal
+
+    &__input-field
+        margin-top: 20px
+        padding: 13px 17px 17px
+        width: 100%
+        border: 1px solid $colorLightGreyBorder
+        color: $colorBlack
+        font-size: 11px
+        font-weight: $fontWeightLight
+        line-height: normal
+        transition-property: background-color
+        transition-duration: 0.4s
+        transition-timing-function: ease-in-out
+
+        &::placeholder
+            color: $colorRegistrationInput
+            font-size: 13px
+            font-weight: $fontWeightLight
+            line-height: normal
+        &:hover
+            background-color: $colorWhiteSmokeOther
+
+    &__wrapper-input-radio
+        display: flex
+        margin-top: 31px
+        margin-bottom: 33px
+
+    &__label-radio
+        display: flex
+        align-items: center
+        margin-right: 18px
+        color: $colorBlack
+        font-size: 11px
+        font-weight: $fontWeightLight
+        line-height: normal
+
+    &__input-radio
+        appearance: auto
+        color: $colorBlack
+        font-size: 11px
+        font-weight: $fontWeightLight
+        line-height: normal
+        display: none
+
+        &-svg
+            margin-right: 9px
+            fill: $colorWhite
+
+        &:checked + svg
+            fill: $colorBlack
+
+    &__label-radio:first-child
+        margin-right: 22px
+
+    &__text
+        margin-top: 15px
+        color: $colorRegistrationInput
+        font-size: 13px
+        font-weight: $fontWeightLight
+        line-height: normal
+
+    &__btn
+        margin-top: 40px
+        padding: 16px 29px 16px 29px
+        border: 1px solid transparent
+        color: $colorWhite
+        font-size: 14px
+        font-weight: $fontWeightRegular
+        line-height: normal
+        background-color: $colorPink
+        transition-property: color, background-color, border-color
+        transition-duration: 0.4s
+        transition-timing-function: ease-in-out
+
+        &:hover
+            border-color: $colorPinkDark
+            color: $colorPinkDark
+            background-color: $colorWhite
+
+        &:hover path
+            fill: $colorPinkDark
+
+        &-svg
+            margin-left: 18px
+
+    &__title
+        margin-bottom: 22px
+        color: $colorBlack
+        font-size: 24px
+        font-weight: $fontWeightLight
+        line-height: normal
+
+    &__description
+        margin-bottom: 20px
+        color: $colorBlack
+        font-size: 24px
+        font-weight: $fontWeightLight
+        line-height: normal
+
+    &__list
+        display: flex
+        flex-direction: column
+        gap: 15px
+
+    &__item
+        color: $colorBlack
+        font-size: 24px
+        font-weight: $fontWeightLight
+        line-height: normal
+
+        &-svg
+            margin-right: 15px
