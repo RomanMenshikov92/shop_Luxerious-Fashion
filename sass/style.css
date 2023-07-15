@@ -1116,6 +1116,10 @@ a {
     padding-bottom: 95px;
   }
 }
+.product__container {
+  display: flex;
+  flex-direction: column;
+}
 .product__title {
   text-align: center;
   font-weight: 400;
