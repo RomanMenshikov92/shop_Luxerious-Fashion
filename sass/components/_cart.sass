@@ -4,42 +4,59 @@
 .cart
     padding-top: 95px
     padding-bottom: 128px
+    @include tablet
+        padding-top: 59px
+    @include mobile
+        padding-top: 39px
+        padding-bottom: 96px
 
-    // &__top
-    //     background-color: $colorLightBegie
-
-    // &__title
-    //     padding: 60px 0
-    //     margin-bottom: 96px
-    //     color: #F16D7F
-    //     font-size: 24px
-    //     font-weight: $fontWeightRegular
-    //     line-height: normal
+    @include mobile
+        &__container
+            padding: 0 10px
 
     &__wrapper
         display: flex
         justify-content: space-between
+        @include tablet
+            flex-direction: column
 
         &-left
             display: flex
             flex-direction: column
             width: 652px
+            margin-left: 20px
+            @include tablet
+                width: 100%
+                margin-left: 0
 
         &-right
             display: flex
             flex-direction: column
-            margin-top: 15px
+            margin-top: 19px
+            margin-left: 30px
             width: 360px
-
+            @include tablet
+                flex-direction: row
+                justify-content: space-between
+                margin-top: 63px
+                width: 100%
+                margin-left: 0
+            @include mobile
+                flex-direction: column
+                margin-top: 50px
     &__products
         display: flex
         flex-direction: column
         gap: 40px
+        @include mobile
+            gap: 30px
 
     &__product
         position: relative
         display: flex
         box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13)
+        @include mobile
+            min-height: 188px
 
         &-btn-close
             position: absolute
@@ -48,11 +65,26 @@
             &:hover path
                 fill: $colorPink
 
+            @include tablet
+                right: 26px
+
+            @include mobile
+                top: 17px
+                right: 10px
+                & svg
+                    width: 10px
+                    height: 11px
+
         &-img
             width: 262px
+            @include mobile
+                width: 144px
+                height: auto
 
         &-text
             padding: 22px 31px 62px
+            @include mobile
+                padding: 16px 17px 16px
 
         &-title
             margin-bottom: 42px
@@ -61,27 +93,39 @@
             font-weight: $fontWeightRegular
             line-height: normal
             color: $colorBlackLight
+            @include mobile
+                margin-bottom: 25px
+                width: 76%
+                font-size: 16px
 
         &-wrapper
             font-size: 22px
             font-weight: $fontWeightRegular
             line-height: normal
             color: $colorBlackLightOtherTwo
+            @include mobile
+                font-size: 14px
 
         &-price
             margin-bottom: 6px
             &-span
                 color: $colorPinkOther
+            @include mobile
+                margin-bottom: 2px
 
         &-color
             margin-bottom: 6px
             &-span
                 color: $colorGrayOther
+            @include mobile
+                margin-bottom: 2px
 
         &-size
             margin-bottom: 6px
             &-span
                 color: $colorGrayOther
+            @include mobile
+                margin-bottom: 2px
 
         &-quantity-input
             margin-left: 31px
@@ -91,21 +135,35 @@
             border: 1px solid $colorLightGrayBorder
             color: $colorGrayOther
 
+            @include mobile
+                margin-left: 25px
+                padding: 0
+                font-size: 10px
+
         &-color
             font-size: 22px
             font-weight: $fontWeightRegular
             line-height: normal
             color: $colorBlackLightOtherTwo
+            @include mobile
+                font-size: 14px
 
     &__nav-btn
         display: flex
         justify-content: space-between
         margin-top: 68px
+        @include tablet
+            margin-top: 57px
+            justify-content: center
+            gap: 50px
+        @include mobile
+            margin-top: 30px
+            gap: 8px
 
     &__btn-clear,
     &__btn-continue
         display: block
-        padding: 17px 35px
+        padding: 17px 38px
         border: 1px solid $colorLightGreyBorder
         color: $colorBlack
         font-size: 14px
@@ -114,6 +172,10 @@
         transition-property: color, background-color
         transition-duration: 0.4s
         transition-timing-function: ease-in-out
+        @include mobile
+            padding: 10px 37px
+            font-size: 12px
+            text-transform: lowercase
 
         &:hover
             color: $colorWhite
@@ -133,6 +195,8 @@
         font-size: 13px
         font-weight: $fontWeightLight
         line-height: normal
+        @include mobile
+            margin-top: 20px
 
         &::placeholder
             color: #B1B1B1
@@ -148,6 +212,10 @@
         transition-property: color, background-color
         transition-duration: 0.4s
         transition-timing-function: ease-in-out
+        @include mobile
+            padding: 12px 21px
+            margin-top: 25px
+            text-transform: lowercase
 
         &:hover
             color: $colorWhite
@@ -159,8 +227,10 @@
         flex-direction: column
         align-items: flex-end
         margin-top: 55px
-        padding: 43px 33px 42px
+        padding: 43px 35px 42px
         background-color: $colorLightGrayAmount
+        @include mobile
+            padding: 43px 28px 42px
 
         &-total
             margin-bottom: 12px
@@ -170,6 +240,8 @@
             line-height: normal
             &-span
                 padding-left: 23px
+            @include mobile
+            margin-bottom: 10px
 
         &-grand
             margin-bottom: 39px
@@ -206,3 +278,21 @@
             &:hover
                 color: $colorPinkDark
                 background-color: $colorWhite
+
+            @include mobile
+                padding: 15px 33px
+                margin: 0 15px
+
+    @include tablet
+        &__delivery-address
+            width: 49%
+            @include mobile
+                width: 100%
+
+        &__amount
+            width: 49%
+            margin-top: 36px
+            @include mobile
+                width: 100%
+                margin-top: 45px
+                height: fit-content

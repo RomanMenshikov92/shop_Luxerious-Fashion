@@ -1,0 +1,23 @@
+@import "../vars"
+@import "../mixins"
+
+.heading
+    background-color: $colorLightBegie
+
+    &__container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-top: 57px
+        padding-bottom: 53px
+        @include mobile
+            justify-content: center
+            padding-top: 48px
+            padding-bottom: 63px
+
+    &__title
+        font-size: 24px
+        font-weight: $fontWeightRegular
+        color: $colorPink
+        @include mobile
+            margin-left: 16px

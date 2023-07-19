@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Luxerious Fashion</title>
     <!-- <link rel="stylesheet" href="styleOld.css" /> -->
-    <link rel="stylesheet" href="sass/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="sass/style.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" >
   </head>
   <body>
     <div class="wrapper">
@@ -15,7 +15,7 @@
         <div class="header__container container">
           <div class="header__left">
             <a class="header__logo" href="index.html" aria-label="Логотип Luxerious Fashion">
-              <img class="header__img-logo" src="img/logo.svg" alt="logo" />
+              <img class="header__img-logo" src="img/logo.svg" alt="logo" >
             </a>
 
             <button class="header__btn-search btn-reset" aria-label="Открыть поиск" type="button">
@@ -45,7 +45,7 @@
                     </svg>
                 </button> -->
 
-            <a href="registration.html" class="header__btn-personal-area" aria-label="Открыть личный кабинет" type="button">
+            <a href="registration.html" class="header__btn-personal-area" aria-label="Открыть личный кабинет">
               <span class="visually-hidden">Кнопка личный кабинет</span>
               <svg class="header__btn-personal-area-svg" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -56,7 +56,7 @@
               </svg>
             </a>
 
-            <a href="cart.html" class="header__btn-registration" aria-label="Открыть корзину">
+            <a href="cart.html" class="header__btn-cart" aria-label="Открыть корзину">
               <span class="visually-hidden">Кнопка корзина</span>
               <svg class="header__btn-registration-svg" width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -68,7 +68,7 @@
             </a>
           </div>
 
-          <input class="header__btn-input" id="checkbox-id" type="checkbox" />
+          <input class="header__btn-input" id="checkbox-id" type="checkbox" >
           <div class="header__btn-burger-menu">
             <h3 class="header__btn-burger-menu-title title">MENU</h3>
             <ul class="header__btn-burger-menu-list list-reset">
@@ -137,9 +137,9 @@
         </div>
       </header>
       <main class="main">
-        <section class="breadcrumbs">
-          <div class="breadcrumbs__container container">
-            <h2 class="breadcrumbs__title title">REGISTRATION</h2>
+        <section class="heading">
+          <div class="heading__container container">
+            <h2 class="heading__title title">REGISTRATION</h2>
           </div>
         </section>
 
@@ -157,7 +157,7 @@
                     name="firstname"
                     placeholder="First Name"
                     autocomplete="off"
-                  />
+                  >
                 </label>
                 <label class="registration__label" for="last">
                   <input
@@ -168,11 +168,11 @@
                     placeholder="Last Name"
                     autocomplete="off"
                     aria-label="Введите фамилию"
-                  />
+                  >
                 </label>
                 <div class="registration__wrapper-input-radio">
                   <label class="registration__label-radio" for="genderMale">
-                    <input type="radio" id="genderMale" class="registration__input-radio input-reset" name="gender" value="Male" /><svg
+                    <input type="radio" id="genderMale" class="registration__input-radio input-reset" name="gender" value="Male" ><svg
                       class="registration__input-radio-svg"
                       width="17"
                       height="17"
@@ -185,7 +185,7 @@
                     Male
                   </label>
                   <label class="registration__label-radio" for="genderFemale">
-                    <input type="radio" id="genderFemale" class="registration__input-radio input-reset" name="gender" value="Female" /><svg
+                    <input type="radio" id="genderFemale" class="registration__input-radio input-reset" name="gender" value="Female" ><svg
                       class="registration__input-radio-svg"
                       width="17"
                       height="17"
@@ -208,7 +208,7 @@
                     placeholder="Email"
                     autocomplete="off"
                     aria-label="Введите электронную почту"
-                  />
+                  >
                 </label>
                 <label class="registration__label" for="password">
                   <input
@@ -218,9 +218,8 @@
                     name="password"
                     placeholder="Password"
                     autocomplete="off"
-                    ,
                     aria-label="Введите пароль"
-                  />
+                  >
                 </label>
               </form>
               <p class="registration__text paragraph">
@@ -303,7 +302,7 @@
         <section class="subscription">
           <div class="subscription__container container">
             <div class="subscription__info">
-              <img class="subscription__img" src="img/subscription_face.png" alt="photo of a woman's face" />
+              <img class="subscription__img" src="img/subscription_face.png" alt="photo of a woman's face" >
               <p class="subscription__paragraph paragraph">
                 &laquo;Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi, a&nbsp;pulvinar purus condimentum&raquo;
               </p>
@@ -311,16 +310,16 @@
             <div class="subscription__subscribe">
               <h3 class="subscription__title title"><span class="subscription__title-span">SUBSCRIBE</span>FOR&nbsp;OUR NEWLETTER AND PROMOTION</h3>
               <form class="subscription__form" action="/" aria-label="Форма подписки" method="POST" enctype="multipart/form-data">
-                <label class="subscription__label" for="email">
+                <label class="subscription__label" for="email-form">
                   <input
-                    id="email"
+                    id="email-form"
                     class="subscription__input input-reset"
                     type="email"
                     aria-label="Введите почту"
                     name="email"
                     autocomplete="off"
                     placeholder="Enter Your Email"
-                  />
+                  >
                 </label>
                 <button class="subscription__btn btn-reset" aria-label="Открыть личный кабинет" type="submit">Subscribe</button>
               </form>

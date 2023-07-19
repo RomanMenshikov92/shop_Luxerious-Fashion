@@ -1,0 +1,191 @@
+@import "../vars"
+@import "../mixins"
+
+.product-personal
+
+    @include mobile
+        &__container
+            padding: 0
+
+    &__wrapper-swiper
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        border-top: 1px solid $colorLightGrayBorder
+        border-bottom: 1px solid $colorLightGrayBorder
+        background-color: $colorGreyOther
+
+    &__left-btn
+        position: absolute
+        left: 2.5%
+        top: 49%
+        padding: 8px
+        background-color: rgba(42, 42, 42, 0.15)
+        @include tablet
+            left: 0
+            top: 48%
+        @include mobile
+            top: 53%
+
+        &:hover svg path
+            fill: $colorPink
+
+    &__right-btn
+        position: absolute
+        right: 2.5%
+        top: 49%
+        padding: 8px
+        background-color: rgba(42, 42, 42, 0.15)
+        @include tablet
+            right: 0
+            top: 48%
+        @include mobile
+            top: 53%
+
+        &:hover svg path
+            fill: $colorPink
+
+    &__image
+        padding-left: 25px
+        padding-top: 10px
+        @include tablet
+            width: 466px
+            padding-top: 27px
+            padding-left: 0
+        @include mobile
+            padding-top: 84px
+
+    &__text
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+        top: -28px
+        padding: 67px 64px
+        border: 1px solid $colorLightGrayBorder
+        background-color: $colorWhite
+        @include tablet
+            top: 29px
+        @include mobile
+            top: 82px
+            padding: 67px 25px 64px
+            border-left: none
+            border-right: none
+
+        &-collection
+            position: relative
+            margin-bottom: 28px
+            font-size: 14px
+            font-weight: $fontWeightLight
+            line-height: normal
+            color: $colorPink
+            &::before
+                content: ""
+                position: absolute
+                bottom: -13px
+                left: 41px
+                width: 63px
+                height: 3px
+                background-color: $colorPink
+
+        &-title
+            margin-bottom: 50px
+            font-size: 18px
+            font-weight: $fontWeightLight
+            line-height: normal
+            color: $colorTextProduct
+            @include tablet
+                margin-bottom: 47px
+            @include mobile
+                margin-bottom: 33px
+
+        &-description
+            margin-bottom: 32px
+            width: 555px
+            font-size: 14px
+            font-weight: $fontWeightLight
+            line-height: normal
+            color: $colorTextProduct1
+            text-align: center
+            @include mobile
+                width: 100%
+                margin-bottom: 39px
+                line-height: 140%
+
+        &-price
+            position: relative
+            margin-right: 20px
+            margin-bottom: 129px
+            font-size: 24px
+            font-weight: $fontWeightLight
+            line-height: normal
+            color: $colorPinkOther
+            &::after
+                content: ""
+                position: absolute
+                bottom: -63px
+                left: -276px
+                width: 641px
+                height: 1px
+                background-color: $colorLightGrayBorder
+                @include mobile
+                    width: 175px
+                    bottom: -29px
+                    left: -59px
+            @include tablet
+                margin-right: 0
+                margin-bottom: 131px
+            @include mobile
+                margin-bottom: 79px
+
+    &__btn
+        display: flex
+        align-items: center
+        padding: 10px 42px
+        margin-top: 48px
+        border: 1px solid $colorPinkDark
+        color: $colorPinkDark
+        font-size: 16px
+        font-weight: $fontWeightRegular
+        line-height: normal
+        transition-property: color, background-color
+        transition-duration: 0.4s
+        transition-timing-function: ease-in-out
+        @include mobile
+            margin-top: 64px
+
+        &:hover
+            color: $colorWhite
+            background-color: $colorPinkDark
+        &:hover svg path
+            fill: $colorWhite
+        & svg
+            margin-right: 22px
+
+    &__sort
+        display: flex
+
+        &-details:not(:last-child)
+            margin-right: 42px
+            @include mobile
+                margin-right: 28px
+
+        &-summary svg
+            padding-left: 9px
+            @include mobile
+            padding-left: 8px
+
+        &-summary
+            color: $colorGrayOther
+            font-size: 14px
+            font-weight: $fontWeightRegular
+            line-height: normal
+            transition: color 0.5s ease
+            cursor: pointer
+            &:hover
+                color: $colorPinkOther
+            &:hover svg path
+                fill: $colorPinkOther
+            @include mobile
+                font-size: 10px
